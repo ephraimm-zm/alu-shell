@@ -1,5 +1,4 @@
 #!/bin/bash
-
 # Loop through all files in the current directory
 for file in *; do
     # Check if the current item is a file

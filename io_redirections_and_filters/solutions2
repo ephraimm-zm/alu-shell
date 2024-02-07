@@ -1,5 +1,4 @@
 #!/bin/bash
-
 # Define the text to be added to each file along with the corresponding file names
 declare -A text_map=(
     ["16-whatsnext"]="grep -A 3 \"root\" /etc/passwd"

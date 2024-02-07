@@ -1,5 +1,4 @@
 # ALU Shell, I/O Redirections and filters Assignments Repository
-
 Welcome to the Shell, I/O Redirections and filters Assignments repository! This directory is dedicated to storing and managing assignments related to Shell, I/O Redirections and filters 
 
 ## Purpose

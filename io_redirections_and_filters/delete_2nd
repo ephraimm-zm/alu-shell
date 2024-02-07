@@ -1,0 +1,14 @@
+#!/bin/bash
+# Iterate over each file in the current directory
+for file in *; do
+    # Check if the item is a regular file
+    if [ -f "$file" ]; then
+        # Check if the second line is empty
+        if [ "$(sed -n '2p' "$file")" == "" ]; then
+            # Delete the second line
+            sed -i '2d' "$file"
+            echo "Deleted second line in '$file'"
+        fi
+    fi
+done
+
