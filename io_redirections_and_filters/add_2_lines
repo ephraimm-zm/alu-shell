@@ -1,0 +1,17 @@
+#!/bin/bash
+
+# Loop through all files in the current directory
+for file in *; do
+    # Check if the current item is a file
+    if [ -f "$file" ]; then
+        # Count the number of lines in the file
+        num_lines=$(wc -l < "$file")
+        # Check if the file has less than two lines
+        if [ "$num_lines" -lt 2 ]; then
+            # Add a newline to the end of the file
+            echo >> "$file"
+            echo "Added newline to '$file'"
+        fi
+    fi
+done
+

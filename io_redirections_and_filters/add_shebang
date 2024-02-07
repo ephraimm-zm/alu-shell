@@ -1,0 +1,17 @@
+#!/bin/bash
+
+# Loop through all files in the current directory
+for file in *; do
+    # Check if the current item is a file
+    if [ -f "$file" ]; then
+        # Check if the first line of the file is #!/bin/bash
+        if [ "$(head -n 1 "$file")" = "#!/bin/bash" ]; then
+            echo "Shebang line already exists in '$file'. Skipping."
+        else
+            # Add the shebang line to the file
+            echo "#!/bin/bash" | cat - "$file" > temp && mv temp "$file"
+            echo "Shebang line added to '$file'"
+        fi
+    fi
+done
+
