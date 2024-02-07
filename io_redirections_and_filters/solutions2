@@ -1,0 +1,29 @@
+#!/bin/bash
+
+# Define the text to be added to each file along with the corresponding file names
+declare -A text_map=(
+    ["16-whatsnext"]="grep -A 3 \"root\" /etc/passwd"
+    ["17-hidethisword"]="grep -v \"bin\" /etc/passwd"
+    ["18-letteronly"]="grep \"^[[:alpha:]]\" /etc/ssh/sshd_config"
+    ["19-AZ"]="echo \"input\" | tr 'Ac' 'Ze'"
+    ["20-hiago"]="echo \"input\" | tr -d 'cC'"
+    ["21-reverse"]="echo \"input\" | rev"
+    ["22-users_and_homes"]="cut -d ':' -f 1,6 /etc/passwd | sort"
+    ["23-empty_casks"]="find . -empty -printf \"%P\\n\""
+    ["24-gifs"]="find . -type f -iname \"*.gif\" -printf \"%f\\n\" | sort -f"
+    ["25-acrostic"]="cut -c 1 | paste -s -d ''"
+    ["26-the_biggest_fan"]="tail -n +2 | cut -f -1 | sort -k 1 | uniq -c | sort -rnk 1 | head -n 11 | rev | cut -d ' ' -f -1 | rev"
+)
+
+# Iterate over each filename in the current directory
+for filename in "${!text_map[@]}"; do
+    # Check if the item is a regular file
+    if [ -f "$filename" ]; then
+        # Add the corresponding text to the second line of the file
+        echo "${text_map[$filename]}" >> "$filename"
+        echo "Text added to the second line of '$filename'"
+    else
+        echo "File '$filename' does not exist. Skipping."
+    fi
+done
+
