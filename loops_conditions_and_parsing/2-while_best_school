@@ -1,1 +1,7 @@
 #!/usr/bin/env bash
+# Loop while i is less than 10
+i =0
+while [ "$i" -lt 10 ]; do
+    echo "Best School"
+    ((i++))  # Increment i
+done
