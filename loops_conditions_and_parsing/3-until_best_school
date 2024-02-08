@@ -1,1 +1,8 @@
 #!/usr/bin/env bash
+#Loop until i == 10
+i=0
+
+until [ "$i" -eq 10 ]; do
+    echo "Best School"
+    ((i++))  # Increment i
+done
