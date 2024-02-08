@@ -1,1 +1,14 @@
 #!/usr/bin/env bash
+# Loop to 10 prinitng Best School ieach time but when its 9 do the same and also include HI
+i=0
+
+# Loop while i is less than 10
+while [ "$i" -lt 11 ]; do
+    if [ "$i" -eq 9 ]; then
+        echo "Best School"
+        echo "Hi"
+    else
+        echo "Best School"
+    fi
+    ((i++))  # Increment i
+done
