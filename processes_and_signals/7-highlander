@@ -1,4 +1,5 @@
 #!/usr/bin/env bash
+#whilie loop to echo different stuff
 trap 'echo "I am invincible!!!"' SIGTERM
 
 while true; do
