@@ -9,7 +9,7 @@ start_process() {
         manage_my_process &
         PID=$!
         echo $PID > /var/run/my_process.pid
-        echo "manage_my_process started with PID: $PID"
+        echo "manage_my_process started"
     fi
 }
 
