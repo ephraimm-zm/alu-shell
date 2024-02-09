@@ -9,7 +9,6 @@ start_process() {
         manage_my_process &
         PID=$!
         echo $PID > /var/run/my_process.pid
-        echo "manage_my_process started"
     fi
 }
 
@@ -19,7 +18,6 @@ stop_process() {
         PID=$(cat /var/run/my_process.pid)
         kill "$PID"
         rm /var/run/my_process.pid
-        echo "manage_my_process stopped"
     else
         echo "manage_my_process is not running."
     fi
