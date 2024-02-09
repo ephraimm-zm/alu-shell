@@ -1,13 +1,15 @@
 #!/usr/bin/env bash
 # Check if the file "school" exists in the current working directory
 if [ -f "school" ]; then
-    # Check if the file is empty
+    echo "school file exists"
+    
+    # Check if the file is not empty
     if [ -s "school" ]; then
         echo "school file is not empty"
     else
         echo "school file is empty"
     fi
-
+    
     # Check if the file is a regular file
     if [ -f "school" ]; then
         echo "school is a regular file"
