@@ -1,17 +1,8 @@
 #!/usr/bin/env bash
-# Get the contents of the current directory and save them into an array to iterate
-# Declare an empty array
-declare -a directory_contents
-
-# Populate the array with the contents of the current directory (excluding hidden files)
-mapfile -t directory_contents < <(ls -A)
-
-# Iterate through the array and print each item
-for item in "${directory_contents[@]}"; do
-    # Check if the item contains a "-" character
-    if [[ $item == *-* ]]; then
-        # Extract the substring after the first "-" character
-        substring="${item#*-}"
-        echo "$substring"
+# Use to display names of none hidden files aftr the first dash
+for file in *; do
+    if [[ ! $file == .* ]]; then
+        name_part=$(echo "$file" | cut -d'-' -f2-)
+        echo "$name_part"
     fi
 done
