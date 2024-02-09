@@ -1,4 +1,5 @@
 #!/usr/bin/env bash
+#Read contents of /etc/passwd then format it in certain way
 input_file="/etc/passwd"
 
 # Set the Internal Field Separator (IFS) to colon (:)
