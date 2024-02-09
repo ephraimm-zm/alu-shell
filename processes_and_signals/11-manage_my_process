@@ -1,6 +1,5 @@
 #!/usr/bin/env bash
-# Management of processes
-
+#Management of processes
 # Function to start manage_my_process
 start_process() {
     if [ -f /var/run/my_process.pid ]; then
@@ -18,8 +17,9 @@ start_process() {
 stop_process() {
     if [ -f /var/run/my_process.pid ]; then
         PID=$(cat /var/run/my_process.pid)
-        kill "$PID" && echo "manage_my_process stopped" || echo "Error: Failed to stop manage_my_process"
+        kill "$PID"
         rm /var/run/my_process.pid
+        echo "manage_my_process stopped"
     else
         echo "manage_my_process is not running."
     fi
@@ -48,4 +48,3 @@ case "$1" in
         exit 1
         ;;
 esac
-
