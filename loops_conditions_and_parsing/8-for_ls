@@ -1,8 +1,5 @@
 #!/usr/bin/env bash
 # Use to display names of none hidden files aftr the first dash
 for file in *; do
-    if [[ ! $file == .* ]]; then
-        name_part=$(echo "$file" | cut -d'-' -f2-)
-        echo "$name_part"
-    fi
+	echo "$file"| cut -d '-' -f2  
 done
