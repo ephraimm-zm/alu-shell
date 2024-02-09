@@ -1,18 +1,16 @@
 #!/usr/bin/env bash
 #echo different messages according to the value of i
-i=0
+i=1
 
-while [ $i -lt 8 ]
+while [ $i -le 10 ]
 do
-    echo "Best School"
-    
-    if [ $i -eq 2 ]; then
+    if [ $i -eq 4 ]; then
         echo "bad luck"
-    fi
-    
-    if [ $i -eq 5 ]; then
+    elif [ $i -eq 8 ]; then
         echo "good luck"
+    else
+        echo "Best School"
     fi
-    
+
     i=$((i+1))
 done
