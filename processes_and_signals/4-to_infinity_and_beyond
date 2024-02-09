@@ -1,1 +1,7 @@
 #!/usr/bin/env bash
+#while true
+while true;
+
+echo To infinity and beyond
+Sleep 2
+
