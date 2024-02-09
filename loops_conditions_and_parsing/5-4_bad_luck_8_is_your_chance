@@ -1,4 +1,4 @@
-#!/msr/bin/env bash
+#!/usr/bin/env bash
 #echo different messages according to the value of i
 i=0
 
