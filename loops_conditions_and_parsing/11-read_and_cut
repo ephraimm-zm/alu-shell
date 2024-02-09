@@ -1,1 +1,8 @@
 #!/usr/bin/env bash
+#read /etc/passwd and cut everthing not needed
+input="/etc/passwd"
+
+while IFS= read -r line
+do
+    echo "$(cut -d':' -f1,3,6 <<< "$line")"
+done < "$input"
