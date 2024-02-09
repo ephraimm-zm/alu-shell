@@ -1,1 +1,3 @@
 #!/usr/bin/env bash
+#pid of bash cmd
+pidof bash
