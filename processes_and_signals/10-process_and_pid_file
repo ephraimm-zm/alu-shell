@@ -1,1 +1,25 @@
 #!/usr/bin/env bash
+#The most random task on Earth
+echo $$ > /var/run/myscript.pid
+
+# Function to handle SIGTERM signal
+sigterm_handler() {
+    echo "I hate the kill command when receiving a SIGTERM signal"
+    rm -r /var/run/myscript.pid
+    exit
+}
+
+# Function to handle SIGINT signal
+sigint_handler() {
+    echo "Y U no love me?!"
+}
+
+# Trap signals
+trap 'sigterm_handler' SIGTERM SIGQUIT
+trap 'sigint_handler' SIGINT
+
+# Infinite loop
+while true; do
+    echo "To infinity and beyond"
+    sleep 1
+done
