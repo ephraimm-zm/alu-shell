@@ -3,12 +3,13 @@
 # Function to start manage_my_process
 start_process() {
     if [ -f /var/run/my_process.pid ]; then
-        echo "manage_my_process is already running"
+        echo "manage_my_process is already running."
     else
         # Start manage_my_process
         manage_my_process &
         PID=$!
         echo $PID > /var/run/my_process.pid
+        echo "manage_my_process started with PID: $PID"
     fi
 }
 
@@ -18,6 +19,7 @@ stop_process() {
         PID=$(cat /var/run/my_process.pid)
         kill $PID
         rm /var/run/my_process.pid
+        echo "manage_my_process stopped"
     else
         echo "manage_my_process is not running."
     fi
@@ -27,18 +29,22 @@ stop_process() {
 restart_process() {
     stop_process
     start_process
+    echo "manage_my_process restarted"
 }
 
 # Main script
-if [ "$1" == "restart" ]; then
-    restart_process
-    echo "manage_my_process restarted"
-elif [ "$1" == "start" ]; then
-    start_process
-    echo "manage_my_process started"
-elif [ "$1" == "stop" ]; then
-    stop_process
-    echo "manage_my_process stopped"
-else
-    echo "Usage: $0 {start|stop|restart}"
-fi
+case "$1" in
+    start)
+        start_process
+        ;;
+    stop)
+        stop_process
+        ;;
+    restart)
+        restart_process
+        ;;
+    *)
+        echo "Usage: $0 {start|stop|restart}"
+        exit 1
+        ;;
+esac
