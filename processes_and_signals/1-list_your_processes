@@ -1,2 +1,3 @@
 #!/usr/bin/env bash
-pidof bash
+#listing all processes
+ps aux
