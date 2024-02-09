@@ -1,3 +1,7 @@
 #!/usr/bin/env bash
 #pkill -f name
-pkill -f 7-highlander
+if pkill -f "7-highlander"; then
+    echo "OK"
+else
+    echo "./7-highlander is still running"
+fi
