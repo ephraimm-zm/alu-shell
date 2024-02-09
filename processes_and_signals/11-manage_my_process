@@ -3,12 +3,13 @@
 # Function to start manage_my_process
 start_process() {
     if [ -f /var/run/my_process.pid ]; then
-        echo "manage_my_process is already running."
+        echo "manage_my_process is already running with PID: $(cat /var/run/my_process.pid)"
     else
         # Start manage_my_process
         manage_my_process &
         PID=$!
         echo $PID > /var/run/my_process.pid
+        echo "manage_my_process started with PID: $PID"
     fi
 }
 
@@ -16,8 +17,9 @@ start_process() {
 stop_process() {
     if [ -f /var/run/my_process.pid ]; then
         PID=$(cat /var/run/my_process.pid)
-        kill "$PID"
+        kill $PID
         rm /var/run/my_process.pid
+        echo "manage_my_process stopped"
     else
         echo "manage_my_process is not running."
     fi
