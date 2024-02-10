@@ -1,0 +1,11 @@
+#!/bin/bash
+
+# Iterate over files in the current directory and its subdirectories
+find . -type f | while read -r file; do
+    # Check if the file ends with "~" or ".swp"
+    if [[ "$file" == *~ || "$file" == *.swp ]]; then
+        # Remove the file
+        rm -f "$file"
+        echo "Removed: $file"
+    fi
+done
