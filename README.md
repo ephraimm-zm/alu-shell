@@ -5,8 +5,8 @@ Welcome to Ephraim's Shell Assignment repository! This directory is dedicated to
 
 This repository was created to facilitate the submission and organization of assignments given by ALU that involve the use of Shell. Each assignment had its own dedicated folder within this directory.
 
-## Requirements
-# General
+# Requirements
+## General
 <br>Allowed editors: vi, vim, emacs
 <br>All your scripts will be tested on Ubuntu 20.04 LTS
 <br>All your scripts should be exactly two lines long ($ wc -l file should print 2)
