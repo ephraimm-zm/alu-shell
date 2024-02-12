@@ -6,7 +6,7 @@ Welcome to Ephraims repository on Permissions in shell! This directory is dedica
 
 At the end of this project, Ephraims was expected to explain to anyone, without the help of Google:
 
-##Objective 1 (Permissions)
+## Objective 1 (Permissions)
 What do the commands chmod, sudo, su, chown, chgrp do
 <br>Linux file permissions
 <br>How to represent each of the three sets of permissions (owner, group and other) as a single digit
@@ -15,7 +15,7 @@ What do the commands chmod, sudo, su, chown, chgrp do
 <br>How to run a command with root privellages
 <br>How to change user ID and become a superstar
 
-##Objective 2 (Other)
+## Objective 2 (Other)
 How to create a user
 <br>How to create a group
 <br>How to print a real and effective user and group IDs
