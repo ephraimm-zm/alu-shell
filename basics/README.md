@@ -1,4 +1,4 @@
-# Shell, basics
+# Ephraims Repository on the basics of Shell
 
 Welcome to the Shell Basics repository! This directory is dedicated to storing and managing assignments related to the basics of shell
 
