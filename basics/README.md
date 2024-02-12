@@ -1,6 +1,6 @@
 # Ephraims Repository on the basics of Shell
 
-Welcome to the Shell Basics repository! This directory is dedicated to storing and managing assignments related to the basics of shell
+Welcome to Ephraims repository on the basics of Shell! This directory is dedicated to storing and managing Ephraims assignments related to the basics of shell
 
 ## Learning Objectives
 At the end of this project, Ephraim was expected to be able to explain to anyone, without the help of Google:
