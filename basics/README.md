@@ -5,7 +5,7 @@ Welcome to Ephraims repository on the basics of Shell! This repository is dedica
 # Description of each script
 
 [0-current_working_directory](https://github.com/ephraimm-zm/alu-shell/blob/master/basics/0-current_working_directory) - Print the current working directory
-<br>1-listit - A script to list the contents of the current working directory
+<br>[1-listit](https://github.com/ephraimm-zm/alu-shell/blob/master/basics/1-listit) - List the contents of the current working directory
 <br>2-bring_me_home - A script to the working directory to the user's home directory
 <br>3-listfiles - A script to display the contents of the current directory in long format
 <br>4-listmorefiles - A script to display the contents of the current directory, including hidden files, in long format
